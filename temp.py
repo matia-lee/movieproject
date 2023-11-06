@@ -2,8 +2,12 @@ import requests
 import openai
 import pandas as pd
 import numpy as np
+from dotenv import load_dotenv
+import os
 
-openai.api_key = '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'
+load_dotenv(".env")
+
+openai.api_key = os.environ.get("OPEN_AI_KEY")
 
 application_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTA3YzMyNTczMjZmYjliMGZhOWQ0NmZhZjRjMTBkZCIsInN1YiI6IjY1NDZhYzQxMjg2NmZhMDBjNDI0MDRmMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bDOlrA_ZPVUKQ7asRdM_VyXg1O6IwmGbpn4GmB0FzoE"
 movie_pages_url = "https://api.themoviedb.org/3/movie/changes?page=1"
