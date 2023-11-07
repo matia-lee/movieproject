@@ -1,1 +1,6 @@
 .env
+embeddings_(with_no_titles)/
+data_(with_no_titles)/
+data_(updated_with_cast_and_crew)/
+embedded_data_(updated_with_cast_and_crew)/
+masterdf-updated-notitle.csv

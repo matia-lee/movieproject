@@ -22,8 +22,8 @@ results = response.json()["results"]
 
 df = pd.DataFrame(columns=["title", "genres", "overview", "release_date", "runtime", "review", "language", "popularity", "cast", "crew", "content to embed"])
 
-total_page = 36
-for page in range(31, total_page + 1):
+total_page = 54
+for page in range(51, total_page + 1):
     movie_pages_url = f"https://api.themoviedb.org/3/movie/changes?page={page}"
     response = requests.get(movie_pages_url, headers=headers)
     results = response.json()["results"]
@@ -62,4 +62,4 @@ for page in range(31, total_page + 1):
         except:
             print("loading...")
 
-df.to_csv("movieinfo-updated pages31-36.csv")
+df.to_csv("movieinfo-updated pages51-54.csv")
