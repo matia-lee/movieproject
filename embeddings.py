@@ -1,25 +1,17 @@
 import openai
 import pandas as pd
 import time
-
-openai.api_key = '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'
-
-
+import os
+from dotenv import load_dotenv
 from openai.embeddings_utils import get_embeddings
 
+load_dotenv(".env")
 
-# def get_embeddings_batch(texts, engine):
-#     embeddings = []
-#     BATCH_SIZE = 50
-#     for i in range(0, len(texts), BATCH_SIZE):
-#         batch = texts[i:i + BATCH_SIZE]
-#         try:
-#             response = openai.Embedding.create(input=batch, engine=engine)
-#             batch_embeddings = [item["embedding"] for item in response["data"]]
-#             embeddings.extend(batch_embeddings)
-#         except openai.error.OpenAIError as e:
-#             print(f"An error occurred: {e}")
-#     return embeddings
+openai.api_key = os.environ.get("OPEN_AI_KEY")
+
+
+
+
 
 def get_embeddings_batch(texts, engine):
     embeddings = []
