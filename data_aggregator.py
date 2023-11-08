@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 
-dir_path = Path("/Users/matialee/code/movie project/embeddings (with no titles)")
+dir_path = Path("./embeddings_(with_no_titles)")
 
 master_df = pd.DataFrame()
 
