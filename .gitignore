@@ -1,2 +1,7 @@
 .env
 *.csv
+data_(updated_with_cast_and_crew)/
+data_(with_no_titles)/
+embedded_data_(updated_with_cast_and_crew)/
+embeddings_(with_no_titles)/
+master_data/
