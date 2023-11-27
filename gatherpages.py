@@ -10,7 +10,7 @@ load_dotenv(".env")
 
 openai.api_key = os.environ.get("OPEN_AI_KEY")
 
-application_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTA3YzMyNTczMjZmYjliMGZhOWQ0NmZhZjRjMTBkZCIsInN1YiI6IjY1NDZhYzQxMjg2NmZhMDBjNDI0MDRmMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bDOlrA_ZPVUKQ7asRdM_VyXg1O6IwmGbpn4GmB0FzoE"
+application_token = os.environ.get("tmdb_key")
 movie_pages_url = "https://api.themoviedb.org/3/movie/changes?page=1"
 credits_url = "https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US"
 
